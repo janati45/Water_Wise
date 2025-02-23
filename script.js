@@ -18,15 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // =========================
-  // 1) Configuration du zoom/pan
-  // =========================
+
   const zoom = d3.zoom()
     .scaleExtent([1, 8])
     .on("zoom", event => g.attr("transform", event.transform));
   svg.call(zoom);
 
   // =========================
-  // 2) Projection et géopath
   // =========================
   const projection = d3.geoNaturalEarth1()
     .scale(250)
