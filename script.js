@@ -160,10 +160,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
     // =========================
-    // Ajouter ou mettre à jour la légende continue
     // =========================
 
-    // Supprimer l'ancienne légende (si elle existe)
     svg.select(".legend").remove();
 
     // Créer un groupe pour la légende
@@ -268,8 +266,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Mettre à jour les visuels
     handleAllChanges();
 
-    // [FACULTATIF] Si vous voulez afficher un line chart mono-pays, appelez ici :
-    // createLineChartSingleCountry(feature);
   }
 
   // =========================
@@ -515,10 +511,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // =========================
-  // 5) (Optionnel) Line chart mono-pays
   // =========================
-  // Si vous souhaitez un chart isolé pour un seul pays au clic,
-  // vous pouvez utiliser ou adapter cette fonction
   function createLineChartSingleCountry(feature) {
     // Nom de pays, code, etc.
     const countryCode = feature.properties.iso_a3;
