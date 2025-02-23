@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>WaterWise – Carte Interactive</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chargement de D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Script principal -->
+  <script defer src="script.js"></script>
+  <!-- (Optionnel) Script du graphique radar, si vous l’utilisez -->
+  <script defer src="radar.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>WaterWise</h1>
+  </header>
+
+  <!-- Zone de contrôles -->
+  <div class = "intro">
+    <a>
+      L'accès à l'eau potable et à des installations sanitaires de base est un enjeu mondial crucial pour la santé publique, le développement économique et la qualité de vie. Les indicateurs présentés dans ces graphiques mettent en lumière des aspects essentiels de l'accès à l'eau et à l'assainissement, tels que la proportion de la population utilisant des sources d'eau améliorées, la disponibilité des services d'eau potable, et la qualité de l'eau consommée. 
+      <br> <br>Ces données révèlent des disparités significatives entre les pays et les régions, soulignant l'importance de politiques publiques efficaces pour garantir un accès équitable et sûr à l'eau. Comprendre ces indicateurs permet d'identifier les défis à relever et de mesurer les progrès accomplis vers l'Objectif de Développement Durable (ODD) n°6 des Nations Unies : "Garantir l'accès de tous à l'eau et à l'assainissement et assurer une gestion durable des ressources en eau".</a>
+  </div>
+  <div id="controls">
+    <div class="control-item">
+      <label for="indicator-select">Indicateur :</label>
+      <select id="indicator-select"></select>
+    </div>
+
+    <!-- Contrôles pour comparer deux pays -->
+    <div class="control-item">
+      <label for="year-slider">Année :</label>
+      <input type="range" id="year-slider" min="2012" max="2022" value="2022">
+      <span id="selected-year">2022</span>
+    </div>
+
+  </div>
+
+  <!-- Conteneur de la carte -->
+  <div id="map-container">
+    <svg id="map" width="800" height="500"></svg>
+  </div>
+  <div class="control-item comparison-controls">
+    <div>
+      <label for="country-select-1">Pays 1 :</label>
+      <select id="country-select-1"></select>
+    </div>
+    <div id = "paysdeux">
+      <label for="country-select-2"><text>Pays 2 :</text></label>
+      <select id="country-select-2"></select>
+    </div>
+  </div>
+
+  <!-- Conteneur pour le graphique en ligne (line chart) -->
+  <div id="chart-container"></div>
+
+  <!-- Conteneur pour le bar chart comparatif -->
+  <div id="compare-bar-chart"></div>
+
+  <!-- (Optionnel) Conteneur pour d'autres graphiques, radar, etc. -->
+  <!-- <div id="radar-chart"></div> -->
+
+  <footer>
+    <p>&copy; 2025 WaterWise</p>
+  </footer>
+</body>
+</html>

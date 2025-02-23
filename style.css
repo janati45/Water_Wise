@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body
+{
+  width: 100%;
+  height:100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+  font-family: "Shrikhand", serif;
+}
+
+h1 {
+
+  font-weight: 400;
+  font-style: normal;
+  color: #7fff00;
+  font-size: 100px;
+  margin: 0;
+}
+a {
+  font-family: "Roboto";
+  font-weight: 200;
+}
+head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body{
+  align-items: center;
+  background-color: #222222;
+}
+.intro{
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+body div{
+  border-radius: 3px;
+  padding-top: 40px;
+
+}
+
+.control-item.comparison-controls {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+}
+
+.control-item.comparison-controls div {
+
+  display: flex;
+  flex-direction: rown;
+  justify-content: center;
+}
+.control-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.control-item label{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #7fff00;
+  font-size: 24px;
+}
+
+.control-item label text{
+  color: #ffffff;
+  font-size: 24px;
+}
+.control-item select{
+  padding-right: 20px;
+}
+
+#year-slider{
+  width: 40%;
+  color: #7fff00;
+}
+
+#chart-container{
+  display: flex;
+  justify-content: center;
+}
+
+#map{
+  border-radius: 20px;
+  border: solid;
+  background-color: rgb(46, 46, 46);
+}
+
+text{
+  font-size: 12px;
+}
+
+:root {
+  --arrow-bg: rgba(255, 255, 255, 0.3);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+#country-select-1 {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
+#country-select-2 {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+#indicator-select {
+  /* Reset */
+  width: 5;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+/* Style du conteneur du slider */
+#year-slider {
+  width: 800px; /* Largeur du slider */
+ /* Marge autour du slider */
+  -webkit-appearance: none; /* Désactiver le style par défaut sur WebKit */
+  appearance: none; /* Désactiver le style par défaut sur les autres navigateurs */
+  background: transparent; /* Fond transparent */
+}
+
+/* Style de la piste du slider (la barre horizontale) */
+#year-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px; /* Hauteur de la piste */
+  background: #444; /* Couleur de la piste */
+  border-radius: 5px; /* Bordures arrondies */
+  border: 1px solid #777; /* Bordure */
+}
+
+#year-slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #444;
+  border-radius: 5px;
+  border: 1px solid #777;
+}
+
+/* Style du curseur du slider (le bouton que l'on déplace) */
+#year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Désactiver le style par défaut */
+  appearance: none;
+  width: 20px; /* Largeur du curseur */
+  height: 20px; /* Hauteur du curseur */
+  background: #7fff00; /* Couleur du curseur */
+  border-radius: 50%; /* Curseur rond */
+  border: 2px solid #fff; /* Bordure du curseur */
+  cursor: pointer; /* Curseur de souris */
+  margin-top: -6px; /* Ajuster la position verticale */
+}
+
+#year-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #7fff00;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* Style pour le focus (quand le slider est sélectionné) */
+#year-slider:focus {
+  outline: none; /* Supprimer la bordure de focus par défaut */
+}
+
+#year-slider:focus::-webkit-slider-runnable-track {
+  background: #555; /* Changer la couleur de la piste en focus */
+}
+
+#year-slider:focus::-moz-range-track {
+  background: #555;
+}
+
+#selected-year{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+a {
+  font-size: 18px;
+  font-family: "Raleway", serif;
+  font-style: italic;
+}
