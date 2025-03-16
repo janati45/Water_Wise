@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const g = svg.append("g");
 
   // =========================
-  // (Optionnel) Filtre d’ombre portée
 
 
   // =========================
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     waterData = data;
 
     // =========================
-    // 4) Remplir liste indicateurs
+    // 4) Remplissage de la  liste indicateurs
     // =========================
     const indicators = [...new Set(waterData.map(d => d.Indicator))];
     d3.select("#indicator-select")
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .text(d => d);
 
     // =========================
-    // 5) Dessiner la carte
+    // 5) Dessin de  la carte
     // =========================
     g.selectAll("path")
       .data(geoData.features)
@@ -78,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .on("click", handleCountryClick);
 
     // =========================
-    // 6) Remplir listes de pays
+    // 6) Remplissage de la  liste de pays
     // =========================
     const allCountries = [...new Set(waterData.map(d => d.Country))].sort();
 
@@ -115,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
   .catch(err => console.error("Erreur lors du chargement:", err));
 
   // =========================
-  // handleAllChanges
   // =========================
   // Cette fonction met à jour la carte, le bar chart, et le line chart “live”
   function handleAllChanges() {
@@ -192,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .attr("offset", d => d.offset)
                 .attr("stop-color", d => d.color);
 
-    // Dessiner un rectangle avec le dégradé
+    // Dessin  d'un rectangle avec le dégradé
     legend.append("rect")
         .attr("x", 0)
         .attr("y", 0)
@@ -200,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .attr("height", legendHeight)
         .style("fill", `url(#${gradientId})`);
 
-    // Ajouter des étiquettes de texte (min et max)
+    // Ajout des étiquettes de texte (min et max)
     legend.append("text")
         .attr("x", legendWidth + 5) // Position horizontale par rapport au rectangle
         .attr("y", 0)
@@ -217,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .style("fill", "#ffffff")
         .style("alignment-baseline", "baseline"); // Alignement en bas
 
-    // Ajouter un titre à la légende
+    // Ajout du  titre à la légende
     legend.append("text")
         .attr("x", 0)
         .attr("y", -20) // Position au-dessus du rectangle
@@ -303,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function() {
       };
     });
 
-    // Nettoyer l'ancien bar chart
+    // Nettoyage de  l'ancien bar chart
     d3.select("#compare-bar-chart").html("");
 
     // Dimensions
@@ -460,7 +458,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .x(d => x(d.Year))
       .y(d => y(d.Value));
 
-    // Préparer un tableau pour tracer 2 lignes
+    // Préparation du tableau pour tracer 2 lignes
     const countriesData = [
       { name: country1, color: "#7fff00", data: dataC1 },
       { name: country2, color: "#ffffff", data: dataC2 }
