@@ -23,7 +23,7 @@ Lancer un serveur local avec la commande :
 
 **python -m http.server 8000**
 Accéder à l’application via :
-t
+
 http://localhost:8000
 # **Déploiement en ligne**
 Le projet est déjà déployé et accessible à cette adresse :
