@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <title>WaterWise – Carte Interactive</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Chargement de D3.js -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- Script principal -->
   <script defer src="script.js"></script>
-  <!-- (Optionnel) Script du graphique radar, si vous l’utilisez -->
-  <script defer src="radar.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Shrikhand&display=swap" rel="stylesheet">
@@ -31,7 +27,6 @@
       <select id="indicator-select"></select>
     </div>
 
-    <!-- Contrôles pour comparer deux pays -->
     <div class="control-item">
       <label for="year-slider">Année :</label>
       <input type="range" id="year-slider" min="2012" max="2022" value="2022">
@@ -40,7 +35,6 @@
 
   </div>
 
-  <!-- Conteneur de la carte -->
   <div id="map-container">
     <svg id="map" width="800" height="500"></svg>
   </div>
@@ -61,8 +55,7 @@
   <!-- Conteneur pour le bar chart comparatif -->
   <div id="compare-bar-chart"></div>
 
-  <!-- (Optionnel) Conteneur pour d'autres graphiques, radar, etc. -->
-  <!-- <div id="radar-chart"></div> -->
+  
 
   <footer>
     <p>&copy; 2025 WaterWise</p>
