@@ -27,10 +27,10 @@ t
 http://localhost:8000
 # **Déploiement en ligne**
 Le projet est déjà déployé et accessible à cette adresse :
-🔗 https://janati45.github.io/Water_Wise/
+ https://janati45.github.io/Water_Wise/
 
 # **Crédits et sources des données**
-Les données utilisées proviennent de sources officielles telles que l’ONU, la Banque Mondiale et l’OMS. Nous avons également mentionné les sources des images et des jeux de données dans la page dédiée du projet.
+Les données utilisées dans ce projet proviennent de sources officielles, garantissant leur fiabilité et leur pertinence pour l'analyse de l'accès à l'eau potable et à l'assainissement :https://www.kaggle.com/datasets/kanchana1990/un-global-water-data-2012-2022
 
 # **Limites et axes d’amélioration**
 L’accès aux données en temps réel pourrait améliorer la pertinence des visualisations.
